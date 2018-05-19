@@ -7,7 +7,7 @@ AT = Airtable(os.environ.get('AIRTABLE_MOVIESTABLE_BASE_ID'),
              'Movies',
              api_key=os.environ.get('AIRTABLE_API_KEY'))
 
-# Create your views here.
+# Creating views here.
 def home_page(request):
     user_query = str(request.GET.get('query', ''))
     # make the search case insensitive by calling lower on the query
