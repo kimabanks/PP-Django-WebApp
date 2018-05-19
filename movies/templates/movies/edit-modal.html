@@ -11,7 +11,7 @@
                     {% csrf_token %}
             		<div class="form-group">
             			<label for="editName">Name</label>
-                        <input type="text" class="form-control" id="editName" placeholder="Enter Name" name="name" value={{ movie.fields.Name }} required/>
+                        <input type="text" class="form-control" id="editName" placeholder="Enter Name" name="name" value="{{ movie.fields.Name }}" required/>
             		</div>
                     <div class="form-group">
             			<label for="editURL">Image URL</label>
@@ -23,7 +23,7 @@
             		</div>
                     <div class="form-group">
             			<label for="editNotes">Notes</label>
-                        <textarea class="form-control" id="editNotes" placeholder="Add Notes" name="notes" ></textarea>
+                        <textarea class="form-control" id="editNotes" placeholder="Add Notes" name="notes" >{{ movie.fields.Notes }}</textarea>
             		</div>
 
                     <button type="submit" class="btn btn-primary">Update</button>
